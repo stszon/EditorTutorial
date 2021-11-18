@@ -14,5 +14,15 @@ namespace EditorTutorial
         {
             InitializeComponent();
         }
+        void OnEditorTextChanged(object sender, TextChangedEventArgs e)
+        {
+            string oldText = e.OldTextValue;
+            string newText = e.NewTextValue;
+        }
+
+        void OnEditorCompleted(object sender, EventArgs e)
+        {
+            string text = ((Editor)sender).Text;
+        }
     }
 }
